@@ -13,6 +13,8 @@ const config = {
     allowExitOnIdle: true
 }
 
+const pool = new Pool(config);
+
 try {
     await pool.query('SELECT NOW()');
     console.log('Base de datos conectada');
@@ -20,6 +22,6 @@ try {
     console.log(error);
 }
 
-const pool = new Pool(config)
+
 
 export default pool;
